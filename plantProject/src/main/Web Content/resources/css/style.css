@@ -1,10 +1,41 @@
 @charset "ISO-8859-1";
 
 body {
-	background: white;
+	background: lightgreen;
 	font: 18px Arial, sans-serif;
 }
 h1{
 	color: darkgreen;
 }
 
+table{
+	border-collapse: collapse;
+	width: 50%;
+	height: 40px;
+}
+
+th, td{
+	border: 1px solid black;
+}
+
+.orders {
+ border: thin solid black;
+}
+.ordersHeader {
+ text-align: center;
+ font-style: italic;
+ color: Snow;
+ background: Teal;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: grey;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.login{
+	margin-right: 10px;
+}
