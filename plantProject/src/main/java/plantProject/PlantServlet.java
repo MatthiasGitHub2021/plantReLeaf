@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//              http://localhost:8080/plantProject/index.xhtml
+
 /**
  * Servlet implementation class PlantServlet
  */
