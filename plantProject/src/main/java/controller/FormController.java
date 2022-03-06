@@ -11,13 +11,11 @@ import beans.User;
 @ViewScoped
 public class FormController 
 {
+	FacesContext fc = FacesContext.getCurrentInstance();
 	
-	public String onLogin(User user)
-	{
-		FacesContext fc = FacesContext.getCurrentInstance();
-		fc.getExternalContext().getRequestMap().put("User", user);
-		
-		return "ViewProducts.xhtml";
+	public String onLogin()
+	{		
+		return "Login.xhtml";
 	}
 	
 	public String onRegistration(User user) 

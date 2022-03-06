@@ -13,15 +13,20 @@
 	margin-right: 20px;
 	}</style>
 	</head>
-	
-	
+		
 	<body>
-	<center>
-<h1>Welcome to Plant Re-Leaf</h1>
-<h:commandButton action="#{FormController.onLogin(User)}" value="Login" class="btn1"/>
-<h:commandButton action="#{FormController.onRegistration(User)}" value="Register" />
-<h:commandButton>
-</h:commandButton>
-</center>
+	
+	  <ui:composition template="/layouts/commonLayout.xhtml">
+      <ui:define name="content">
+		<h:form>
+		<center>
+		<h1>Welcome to Plant Re-Leaf</h1>
+		<h:commandButton action="#{FormController.onLogin()}" value="Login" class="btn1"/>
+		<h:commandButton action="#{FormController.onRegistration()}" value="Register"/>
+		</center>
+		</h:form>
+      </ui:define>
+      </ui:composition>
+	
 	</body>
 </html>
