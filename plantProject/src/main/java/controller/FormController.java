@@ -18,11 +18,12 @@ public class FormController
 		return "Login.xhtml";
 	}
 	
-	public String onRegistration(User user) 
- {
-		FacesContext fc = FacesContext.getCurrentInstance();
-		fc.getExternalContext().getFlash().put("User", user);
-		
-		return "registration.xhtml";
+	public String onRegistration() 
+ {		
+		return "register.xhtml";
  }
+	
+	public String onSubmit() {
+		return "currentEndpoint.xhtml";
+	}
 }
