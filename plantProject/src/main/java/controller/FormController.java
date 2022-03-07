@@ -26,4 +26,5 @@ public class FormController
 	public String onSubmit() {
 		return "currentEndpoint.xhtml";
 	}
+	
 }

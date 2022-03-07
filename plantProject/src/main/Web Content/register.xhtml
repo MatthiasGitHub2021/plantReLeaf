@@ -2,8 +2,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 
-	<ui:composition>
+	<head>
+	<title>Register New User</title>
+	</head>
+
+	<body>
+	<ui:composition template = "layouts/commonLayout.xhtml">
+	<ui:define name="content">
+	<h:form>
+	<center>
+	
+	Welcome New <br/> Seedling!	<br/>
+	<h:inputText a:placeholder="First Name"/><br/>
+	<h:inputText a:placeholder="Last Name"/><br/>
+	<h:inputText a:placeholder="Email Address"/><br/>
+	<h:inputText a:placeholder="Phone Number"/><br/>
+	<h:inputText a:placeholder="User Name"/><br/>
+	<h:inputText a:placeholder="Password"/><br/>
+	<h:commandButton action="#{FormController.onLogin()}" value="Submit" />
+	
+	
+	</center>
+	</h:form>
+	</ui:define>
+	
+	
 	</ui:composition>
+	</body>
 </html>
