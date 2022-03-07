@@ -16,12 +16,12 @@
 	<center>
 	
 	Welcome New <br/> Seedling!	<br/>
-	<h:inputText a:placeholder="First Name"/><br/>
-	<h:inputText a:placeholder="Last Name"/><br/>
-	<h:inputText a:placeholder="Email Address"/><br/>
-	<h:inputText a:placeholder="Phone Number"/><br/>
-	<h:inputText a:placeholder="User Name"/><br/>
-	<h:inputText a:placeholder="Password"/><br/>
+	<h:inputText a:placeholder="First Name" id="firstName" value="#{User.firstName}"/><br/>
+	<h:inputText a:placeholder="Last Name" id="lastName" value="#{User.lastName}"/><br/>
+	<h:inputText a:placeholder="Email Address" id="email" value="#{User.email}"/><br/>
+	<h:inputText a:placeholder="Phone Number" id="phoneNum" value="#{User.phoneNum}"/><br/>
+	<h:inputText a:placeholder="User Name" id="userName" value="#{User.userName}"/><br/>
+	<h:inputText a:placeholder="Password" id="password" value="#{User.password}"/><br/>
 	<h:commandButton action="#{FormController.onLogin()}" value="Submit" />
 	
 	
