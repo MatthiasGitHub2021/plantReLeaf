@@ -14,10 +14,14 @@ import beans.User;
 public class FormController 
 {
 	FacesContext fc = FacesContext.getCurrentInstance();
+	Map<String, Object> sessionMap = fc.getExternalContext().getSessionMap();
 	
-	public String onLogin()
-	{		
+	public String onLogin(User user){		
+		if(user.getUserName() != sessionMap.get(user.getUserName()) || user.getPassword() != sessionMap.get(user.getPassword())) {
+			//add jsf message here
+		}else {
 		return "Login.xhtml";
+		}
 	}
 	
 	public String onRegistration() 
@@ -26,8 +30,6 @@ public class FormController
  }
 	
 	public String onSubmit(User user) {
-		
-		Map<String, Object> sessionMap = fc.getExternalContext().getSessionMap();
 		
 		sessionMap.put("firstName", user.getFirstName());
 		sessionMap.put("lastName", user.getLastName());
