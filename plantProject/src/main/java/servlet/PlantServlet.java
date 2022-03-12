@@ -1,4 +1,4 @@
-package plantProject;
+package servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletConfig;
