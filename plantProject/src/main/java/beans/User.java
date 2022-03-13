@@ -11,6 +11,7 @@ import javax.validation.constraints.Size;
 @ViewScoped
 public class User 
 {
+	
 	@NotNull()
 	@Size(min=1,max=50)
 	String firstName;
