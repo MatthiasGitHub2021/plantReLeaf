@@ -19,6 +19,8 @@ public class UserService implements UserInterface {
         // TODO Auto-generated constructor stub
     }
 
+    
+    //getters/setters
 	@Override
 	public void getFirstName(User u) {
 		// TODO Auto-generated method stub

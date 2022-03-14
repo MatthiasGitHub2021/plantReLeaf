@@ -1,48 +1,50 @@
 package business;
 
+import java.util.List;
+
 import javax.ejb.Local;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import beans.Plant;
 
+//Handles all business logic for actions pertaining to Plant products
+
 @Stateless
 @Local(PlantInterface.class)
 @LocalBean
 public class PlantService implements PlantInterface {
 
-	//make test plant hashmap or arraylist
-	//this page needs lots, addPlant, deletePlant etc...
 	
 	
 	@Override
-	public void getName(Plant p) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void getSize(Plant p) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void getDescription(Plant p) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void getGrown(Plant p) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Boolean getFlowering() {
+	public List<PlantsList> getPlantList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
+	@Override
+	public boolean addPlant() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void getPlantByID() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean deletePlant() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updatePlant() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

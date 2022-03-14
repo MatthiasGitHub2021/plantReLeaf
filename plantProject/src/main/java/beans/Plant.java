@@ -1,5 +1,7 @@
 package beans;
 
+ //This page is for creating the plant entity
+ 
 public class Plant {
 	String name;
 	String size;
@@ -18,6 +20,7 @@ public class Plant {
 		this.flowering = flowering;
 	}
 
+	//getters/setters
 	public String getName() {
 		return name;
 	}
