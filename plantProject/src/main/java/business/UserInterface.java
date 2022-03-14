@@ -14,9 +14,4 @@ public interface UserInterface {
 	public void getPassWord(User u);
 
 
-
-
-
-	
-
 }
