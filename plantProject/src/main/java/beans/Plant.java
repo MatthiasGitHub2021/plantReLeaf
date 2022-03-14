@@ -19,6 +19,7 @@ public class Plant {
 		this.grown = grown;
 		this.flowering = flowering;
 	}
+	
 
 	//getters/setters
 	public String getName() {
