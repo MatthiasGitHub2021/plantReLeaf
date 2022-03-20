@@ -5,7 +5,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import beans.PlantEntity;
 
 //Service for handling Plant database actions
 
@@ -21,15 +25,35 @@ public class PlantDataService implements DataAccessInterface<Object> {
 
 
 	@Override
-	public List findAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PlantEntity> findAll(){
+		
+		//List to hold plant entities returned from database
+		List<PlantEntity> plant = new ArrayList<PlantEntity>();
+		
+		try {
+			// Create Iterable Object of PlantEntity from database query
+						Iterable<PlantEntity> PlantIterable = plantRepository.findAll();
+
+						// For each item in Iterable Object, add to List of PlantEntity
+						PlantIterable.forEach(plant::add);
+					} 
+					catch (Exception e) {
+						e.printStackTrace();
+					}
+
+					// Return List of PlantEntities
+					return plant;
+		
 	}
 
 	@Override
-	public Object findByID(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public PlantEntity findById(Object t) {
+		
+		// Optional Object to hold CoffeeEntity returned from database by id
+		Optional<PlantEntity> plant = plantRepository.findById((long) t);
+	
+		// If Optional Object !null, return PlantEntity, else throw NoSuchElement Exception
+		return plant.get();
 	}
 
 	@Override
@@ -93,6 +117,19 @@ public class PlantDataService implements DataAccessInterface<Object> {
 
 				}
 		return false;
+	}
+	
+	public boolean create(Object t) {
+
+		try	{
+			// Attempt to save new PlantEntity to database
+			plantRepository.save(t);
+		}catch (Exception e){
+			e.printStackTrace();
+			return false;
+		}
+
+		return true;
 	}
 
 }

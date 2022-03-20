@@ -2,16 +2,16 @@ package beans;
 
  //This page is for creating the plant entity
  
-public class Plant {
+public class PlantEntity {
 	String name;
 	String size;
 	String description;
 	String grown;
 	Boolean flowering;
 	
-	public Plant() {}
+	public PlantEntity() {}
 	
-	public Plant(String name, String size, String description, String grown, Boolean flowering) {
+	public PlantEntity(String name, String size, String description, String grown, Boolean flowering) {
 		super();
 		this.name = name;
 		this.size = size;

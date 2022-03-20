@@ -6,7 +6,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
-import beans.User;
+import beans.UserEntity;
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name="FormController")

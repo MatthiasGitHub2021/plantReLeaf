@@ -1,9 +1,7 @@
-package repository;
+package data;
 
 import java.sql.SQLException;
 import java.util.List;
-
-import beans.PlantEntity;
 
 /**
  * Interface for object with CRUD database method
@@ -14,9 +12,10 @@ import beans.PlantEntity;
 
 public interface DataAccessInterface <T>{
 
-	public List<PlantEntity> findAll();
-	public T findById(T t);
+	public List<T> findAll();
+	public T findByID(int id);
 	public boolean create(T t) throws SQLException;
 	public boolean update(T t) throws SQLException;
 	public boolean delete(T t) throws SQLException;
 }
+

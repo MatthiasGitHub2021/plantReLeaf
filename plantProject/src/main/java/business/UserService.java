@@ -3,7 +3,7 @@ package business;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
-import beans.User;
+import beans.UserEntity;
 
 /**
  * Session Bean implementation class UserService
@@ -22,37 +22,37 @@ public class UserService implements UserInterface {
     
     //getters/setters
 	@Override
-	public void getFirstName(User u) {
+	public void getFirstName(UserEntity u) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getLastName(User u) {
+	public void getLastName(UserEntity u) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getPhoneNumber(User u) {
+	public void getPhoneNumber(UserEntity u) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getEmail(User u) {
+	public void getEmail(UserEntity u) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getUserName(User u) {
+	public void getUserName(UserEntity u) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getPassWord(User u) {
+	public void getPassWord(UserEntity u) {
 		// TODO Auto-generated method stub
 		
 	}

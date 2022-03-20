@@ -12,18 +12,18 @@ import javax.faces.bean.ViewScoped;
 @ManagedBean(name = "Orders")
 @ViewScoped
 public class Plants {
-	List<Plant> plantList = new ArrayList<Plant>();
+	List<PlantEntity> plantList = new ArrayList<PlantEntity>();
 	
-	public List<Plant> getPlantList(Plant p) {
+	public List<PlantEntity> getPlantList(PlantEntity p) {
 		return plantList;
 	 
 	}
 	
-	public void add(Plant p) {
+	public void add(PlantEntity p) {
 		plantList.add(p);
 	}
 	
-	public void delete(Plant p) {
+	public void delete(PlantEntity p) {
 		//plantList.delete(p);
 	}
 	

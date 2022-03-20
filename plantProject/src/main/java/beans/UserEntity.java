@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 @SuppressWarnings("deprecation")
 @ManagedBean(name="User")
 @ViewScoped
-public class User 
+public class UserEntity 
 {
 	
 	@NotNull()
@@ -22,11 +22,11 @@ public class User
 	String userName;
 	String password;
 	
-	public User() {
+	public UserEntity() {
 		super();
 	}
 		
-	public User(String firstName, String lastName, int phoneNum, String email, String userName, String password) {
+	public UserEntity(String firstName, String lastName, int phoneNum, String email, String userName, String password) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNum = phoneNum;
