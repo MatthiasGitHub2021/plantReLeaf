@@ -123,6 +123,7 @@ public class PlantDataService implements DataAccessInterface<Object> {
 
 		try	{
 			// Attempt to save new PlantEntity to database
+			//todo make DAO and plantRepository connect to mysql
 			plantRepository.save(t);
 		}catch (Exception e){
 			e.printStackTrace();
