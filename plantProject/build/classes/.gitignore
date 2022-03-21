@@ -1,7 +1,6 @@
-/repository/
+/controller/
 /beans/
 /business/
-/servlet/
-/models/
-/controller/
 /data/
+/models/
+/repository/
