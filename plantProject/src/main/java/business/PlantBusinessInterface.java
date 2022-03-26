@@ -29,5 +29,7 @@ public interface PlantBusinessInterface {
 	
 	//update plant
 	public boolean updatePlant(PlantModel plantModel);
+
+	public void getPlants();
 	
 }
