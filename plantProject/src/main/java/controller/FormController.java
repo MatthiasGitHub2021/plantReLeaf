@@ -8,6 +8,11 @@ import javax.faces.context.FacesContext;
 
 import beans.UserEntity;
 
+/**
+ * Controller for main page
+ * @author matth
+ *
+ */
 @SuppressWarnings("deprecation")
 @ManagedBean(name="FormController")
 @ViewScoped

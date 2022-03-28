@@ -1,6 +1,8 @@
 package beans;
 
- //This page is for creating the plant entity
+/**
+ * Model that holds information related to a plant object
+ */
  
 public class PlantEntity {
 	String name;

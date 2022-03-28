@@ -5,7 +5,11 @@ import javax.faces.bean.ViewScoped;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-//This page is for creating the User entity
+/**
+ * 
+ * Model for an user object.
+ *
+ */
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name="User")

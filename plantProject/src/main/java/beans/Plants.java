@@ -6,7 +6,9 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-//holds the plantList
+/**
+ * Returns list for REST Services
+ */
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "Orders")

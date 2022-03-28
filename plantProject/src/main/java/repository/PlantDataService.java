@@ -11,7 +11,11 @@ import java.util.Optional;
 
 import beans.PlantEntity;
 
-//Service for handling Plant database actions
+/**
+ * Crud Repository for Plant objects
+ * @author mia
+ *
+ */
 
 public class PlantDataService implements DataAccessInterface<Object> {
 	//connect

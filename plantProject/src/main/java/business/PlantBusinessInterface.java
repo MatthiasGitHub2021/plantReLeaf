@@ -15,21 +15,43 @@ import models.PlantModel;
 @Local
 public interface PlantBusinessInterface {
 	
-	//method to return list of all plant entities
+	/**
+	 * Method for returning a list of all plant products
+	 * 
+	 * @return a List of type PlantModel
+	 */
 	public List<PlantModel> getPlantList();
 	
-	//method for adding a PlantModel to the database;
+	/**
+	 * Method for adding a PlantModel to the database
+	 * 
+	 * @param plantModel Plant model instance
+	 * @return boolean indicating successful insertion of PlantModel into database
+	 */
 	public boolean addPlant(PlantModel plantModel);
 	
-	//return plant entity by id
+	/**
+	 * Method for returning a PlantModel by its id
+	 * 
+	 * @param id id number for desired PlantModel
+	 * @return instance of PlantModel
+	 */
 	public PlantModel getPlantById(int id);
 	
-	//delete plant
+	/**
+	 * Method for deleting a PlantModel from the database
+	 * 
+	 * @param PlantModel instance of PlantModel to be deleted
+	 * @return boolean indicating successful deletion of PlantModel from database
+	 */
 	public boolean deletePlant(PlantModel plantModel);
 	
-	//update plant
+	/**
+	 * Method for updating a PlantModel in the database
+	 * 
+	 * @param coffeeModel PlantModel instance to be updated
+	 * @return boolean indication successful update of PlantModel in database
+	 */
 	public boolean updatePlant(PlantModel plantModel);
-
-	public void getPlants();
 	
 }

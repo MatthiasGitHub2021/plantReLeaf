@@ -13,10 +13,11 @@ import beans.PlantEntity;
  */
 
 public class PlantDataService implements DataAccessInterface<PlantEntity>{
-
-	private PlantRepositorty plantRepository;
 	
-	public PlantDataService(PlantRepositorty plantRepository) {
+	
+	 PlantRepository plantRepository;
+	
+	public PlantDataService(PlantRepository plantRepository) {
 		this.plantRepository = plantRepository;
 	}
 	
@@ -31,7 +32,7 @@ public class PlantDataService implements DataAccessInterface<PlantEntity>{
 						Iterable<PlantEntity> PlantIterable = plantRepository.findAll();
 
 						// For each item in Iterable Object, add to List of PlantEntity
-						plantIterable.forEach(plant::add);
+						PlantIterable.forEach(plant::add);
 					} 
 					catch (Exception e) {
 						e.printStackTrace();
@@ -39,7 +40,7 @@ public class PlantDataService implements DataAccessInterface<PlantEntity>{
 
 					// Return List of PlantEntities
 					return plant;
-		}
+		
 	}
 
 
@@ -87,6 +88,13 @@ public class PlantDataService implements DataAccessInterface<PlantEntity>{
 			return false;
 		}	
 		return true;
+	}
+
+
+	@Override
+	public PlantEntity findByID(int id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

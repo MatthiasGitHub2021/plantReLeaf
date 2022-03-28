@@ -7,11 +7,17 @@ import javax.ejb.Local;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
-import beans.Plant;
+
 import beans.PlantEntity;
+import data.PlantDataService;
 import models.PlantModel;
 
-//Handles all business logic for actions pertaining to Plant products
+/**
+ * Handles all business logic for actions pertaining to plant products
+ * 
+ * @author Matthias
+ *
+ */
 
 @Stateless
 @Local(PlantBusinessInterface.class)
@@ -30,33 +36,9 @@ public class PlantBusinessService implements PlantBusinessInterface {
 		List<PlantModel> plantProducts = new ArrayList<PlantModel>();
 		
 		for(PlantEntity entity : plantProds) {
-			plantProducts.add(new PlantModel(entity.getId(), ))
+			plantProducts.add(new PlantModel(entity.getName(), entity.getSize(), entity.getDescription(), entity.getGrown(), entity.getFlowering()));
 		}
 		return plantProducts;
-	}
-
-	@Override
-	public boolean addPlant() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void getPlantByID() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean deletePlant() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean updatePlant() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	@Override
