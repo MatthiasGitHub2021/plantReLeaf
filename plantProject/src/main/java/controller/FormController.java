@@ -20,12 +20,21 @@ public class FormController{
 	FacesContext fc = FacesContext.getCurrentInstance();
 	Map<String, Object> sessionMap = fc.getExternalContext().getSessionMap();
 	
-	public String onLogin(){		
-		//if(user.getUserName() != sessionMap.get(user.getUserName()) || user.getPassword() != sessionMap.get(user.getPassword())) {
-			//add jsf message here
-		//}else {
-		return "login.xhtml";
-		//}
+//	public String onLogin(){		
+//		//if(user.getUserName() != sessionMap.get(user.getUserName()) || user.getPassword() != sessionMap.get(user.getPassword())) {
+//			//add jsf message here
+//		//}else {
+//		return "login.xhtml";
+//		//}
+//	}
+	
+	public String onLogoff() {
+		// Invalidate the Session to clear the security token
+		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+			
+		// Redirect to a protected page (so we get a full HTTP Request) to get Login Page
+		return "TestResponse.xhtml?faces-redirect=true";
+
 	}
 	
 	public String onRegistration(){		
